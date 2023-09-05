@@ -18,8 +18,12 @@ int main(int argc, char const *argv[])
         printf("Ingrese el total de ventas de la sucursal numero %d \n", s+1);
         scanf("%lf", &empresaY[s]);
         totalVentas += empresaY[s];
-        printf("La sucursal numero %d tiene un ingreso total de $ %.2lf \n\n\n", s+1, *p);
+        
     }
+    p = empresaY;//Lo mismo. siempre hay volver a poner el puntero al principio del vector
+    for(int s = 0; s < sucursales; s++, p++){
+		printf("La sucursal numero %d tiene un ingreso total de $ %.2lf \n\n\n", s+1, *p);
+		}
     printf("El total de ventas es de $ %.2lf \n\n\n", *pTotalVentas);
 
     return 0;
